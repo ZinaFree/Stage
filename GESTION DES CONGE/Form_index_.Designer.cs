@@ -83,12 +83,12 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MV Boli", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(650, 30);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(618, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(334, 46);
+            this.label7.Size = new System.Drawing.Size(349, 46);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Gestion des Congé\r\n";
+            this.label7.Text = "Gestion des Congés\r\n";
             // 
             // label3
             // 
