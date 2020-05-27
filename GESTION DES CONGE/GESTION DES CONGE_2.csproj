@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1B78A09-B1B4-40DC-AED1-6BF02045CC54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GESTION_DES_CONGE</RootNamespace>
+    <AssemblyName>GESTION DES CONGE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\Downloads\Compressed\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\yest_gestion_des_conge\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajouter_division.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_division.Designer.cs">
+      <DependentUpon>Ajouter_division.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter_servise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_servise.Designer.cs">
+      <DependentUpon>Ajouter_servise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="christal_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="christal_report.Designer.cs">
+      <DependentUpon>christal_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conge_excepionelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conge_excepionelle.Designer.cs">
+      <DependentUpon>Conge_excepionelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conge_expirer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conge_expirer.Designer.cs">
+      <DependentUpon>conge_expirer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="print_all.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>print_all.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\CONGE8EXCEPTIONELLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CONGE8EXCEPTIONELLE.Designer.cs">
+      <DependentUpon>CONGE8EXCEPTIONELLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONGE_ANUEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONGE_ANUEL.Designer.cs">
+      <DependentUpon>CONGE_ANUEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conge_Maladie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conge_Maladie.Designer.cs">
+      <DependentUpon>Conge_Maladie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_index_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_index_.Designer.cs">
+      <DependentUpon>Form_index_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mariiage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mariiage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mise_ajours_des_employes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mise_ajours_des_employes.Designer.cs">
+      <DependentUpon>Mise_ajours_des_employes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report_F.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_F.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services_.Designer.cs">
+      <DependentUpon>Services_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service_statistique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service_statistique.Designer.cs">
+      <DependentUpon>Service_statistique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STATISTIQUES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STATISTIQUES.Designer.cs">
+      <DependentUpon>STATISTIQUES.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ajouter_division.resx">
+      <DependentUpon>Ajouter_division.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajouter_servise.resx">
+      <DependentUpon>Ajouter_servise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="christal_report.resx">
+      <DependentUpon>christal_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conge_excepionelle.resx">
+      <DependentUpon>Conge_excepionelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conge_expirer.resx">
+      <DependentUpon>conge_expirer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_all.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>print_all.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CONGE8EXCEPTIONELLE.resx">
+      <DependentUpon>CONGE8EXCEPTIONELLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONGE_ANUEL.resx">
+      <DependentUpon>CONGE_ANUEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conge_Maladie.resx">
+      <DependentUpon>Conge_Maladie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_index_.resx">
+      <DependentUpon>Form_index_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mariiage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Mariiage.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mise_ajours_des_employes.resx">
+      <DependentUpon>Mise_ajours_des_employes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_F.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_F.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services_.resx">
+      <DependentUpon>Services_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_statistique.resx">
+      <DependentUpon>Service_statistique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STATISTIQUES.resx">
+      <DependentUpon>STATISTIQUES.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Interface-Delete-Sign-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\89536121_1046653765702218_4186759125440397312_n-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-human-person-login-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outlined_remove-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_-_Cross-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programming-Settings-3-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programming-Settings-3-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programming-Settings-3-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programming-Settings-3-icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programming-Settings-3-icon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_delete_outline_remove-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Very-Basic-Update-icon.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\Programming-Settings-3-icon6.png" />
+    <None Include="Resources\Programming-Settings-3-icon5.png" />
+    <None Include="Resources\absenteeism-disappear-absence-leave-stop-128.png" />
+    <None Include="Resources\refresh-128.png" />
+    <None Include="Resources\notify.jpg" />
+    <Content Include="Resources\rrrr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
