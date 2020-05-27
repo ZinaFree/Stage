@@ -63,7 +63,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.bunifuSeparator3);
@@ -82,11 +82,11 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MV Boli", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(618, 28);
+            this.label7.Font = new System.Drawing.Font("MV Boli", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(578, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(349, 46);
+            this.label7.Size = new System.Drawing.Size(475, 63);
             this.label7.TabIndex = 12;
             this.label7.Text = "Gestion des Congés\r\n";
             // 
@@ -95,7 +95,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label3.Location = new System.Drawing.Point(1147, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(278, 18);
@@ -123,7 +123,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label4.Location = new System.Drawing.Point(1194, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 18);
@@ -134,7 +134,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label5.Location = new System.Drawing.Point(111, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(398, 18);
@@ -145,12 +145,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label6.ForeColor = System.Drawing.Color.Lime;
             this.label6.Location = new System.Drawing.Point(189, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 36);
+            this.label6.Size = new System.Drawing.Size(168, 18);
             this.label6.TabIndex = 10;
-            this.label6.Text = "ROYAUME DEU MAROC \r\n\r\n";
+            this.label6.Text = "ROYAUME DU MAROC";
             // 
             // pictureBox3
             // 
@@ -164,7 +164,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.bunifuThinButton22);
             this.panel2.Controls.Add(this.bservice);
             this.panel2.Controls.Add(this.bunifuSeparator1);
@@ -189,7 +189,7 @@
             this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
             this.bunifuThinButton22.ButtonText = "Mise ajour des employes";
             this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -215,7 +215,7 @@
             this.bservice.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bservice.ActiveForecolor = System.Drawing.Color.White;
             this.bservice.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bservice.BackColor = System.Drawing.SystemColors.Control;
+            this.bservice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.bservice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bservice.BackgroundImage")));
             this.bservice.ButtonText = "Services";
             this.bservice.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -284,20 +284,20 @@
             // 
             this.bunifuThinButton27.ActiveBorderThickness = 1;
             this.bunifuThinButton27.ActiveCornerRadius = 20;
-            this.bunifuThinButton27.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton27.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton27.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton27.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton27.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton27.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.bunifuThinButton27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton27.BackgroundImage")));
             this.bunifuThinButton27.ButtonText = "Maladie";
             this.bunifuThinButton27.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton27.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton27.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton27.IdleBorderThickness = 1;
             this.bunifuThinButton27.IdleCornerRadius = 20;
             this.bunifuThinButton27.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton27.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton27.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton27.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton27.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton27.Location = new System.Drawing.Point(194, -4);
             this.bunifuThinButton27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuThinButton27.Name = "bunifuThinButton27";
@@ -310,20 +310,20 @@
             // 
             this.bunifuThinButton26.ActiveBorderThickness = 1;
             this.bunifuThinButton26.ActiveCornerRadius = 20;
-            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
             this.bunifuThinButton26.ButtonText = "Exceptionel";
             this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton26.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton26.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton26.IdleBorderThickness = 1;
             this.bunifuThinButton26.IdleCornerRadius = 20;
             this.bunifuThinButton26.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton26.Location = new System.Drawing.Point(99, -4);
             this.bunifuThinButton26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuThinButton26.Name = "bunifuThinButton26";
@@ -336,20 +336,20 @@
             // 
             this.bunifuThinButton25.ActiveBorderThickness = 1;
             this.bunifuThinButton25.ActiveCornerRadius = 20;
-            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
             this.bunifuThinButton25.ButtonText = "Anuel";
             this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton25.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton25.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton25.IdleBorderThickness = 1;
             this.bunifuThinButton25.IdleCornerRadius = 20;
             this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuThinButton25.Location = new System.Drawing.Point(4, -4);
             this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuThinButton25.Name = "bunifuThinButton25";
@@ -362,10 +362,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(742, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(73, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "label2";
             // 
@@ -376,7 +377,7 @@
             this.bacceuil.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bacceuil.ActiveForecolor = System.Drawing.Color.White;
             this.bacceuil.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bacceuil.BackColor = System.Drawing.SystemColors.Control;
+            this.bacceuil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.bacceuil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bacceuil.BackgroundImage")));
             this.bacceuil.ButtonText = "Acceuil";
             this.bacceuil.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -427,7 +428,7 @@
             this.bcongé.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bcongé.ActiveForecolor = System.Drawing.Color.White;
             this.bcongé.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bcongé.BackColor = System.Drawing.SystemColors.Control;
+            this.bcongé.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.bcongé.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bcongé.BackgroundImage")));
             this.bcongé.ButtonText = "Congé";
             this.bcongé.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -474,7 +475,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form_index_";
-            this.Text = "Form_index_";
+            this.Text = "Gestion des conges";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_index__Load);
             this.panel1.ResumeLayout(false);
