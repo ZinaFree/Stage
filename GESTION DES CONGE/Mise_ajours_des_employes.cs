@@ -45,7 +45,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
             //methode verifier
@@ -61,9 +60,7 @@ namespace GESTION_DES_CONGE
                 //dt.Load(dr);
                 //con.Close();
                 //if (dt.Rows.Count > 0)
-                //{
                 //    MessageBox.Show("L'employé excist deja", "Important", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
                 //else
                 //{
                 //    ajouter();
@@ -74,7 +71,7 @@ namespace GESTION_DES_CONGE
                 da.Fill(ds, "employe");
                 if (ds.Tables["employe"].Rows.Count > 0)
                 {
-                    MessageBox.Show("L'employé excist deja", "Important", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("L'employé exsiste deja", "Important", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -84,19 +81,14 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
-
-
         }
 
         public void ajouter()
         {
             try
             {
-
                 SqlCommand cmd = new SqlCommand("insert into employe(N_dote,Nom_FR,Prenom_FR,Nom_AR,Prenom_AR,Grade_FR,Grade_AR,id_service,service_AR,duree_date_precedent,duree_date_actuel) values('" + tid.Text + "', '" + tnom.Text + "', '" + tprenom.Text + "', '" + tnomAR.Text + "', '" + tprenomAR.Text + "', '" + tgrade.Text + "', '" + tgradeAR.Text + "','" + tidservice.Text + "','"+tserviceAR.Text+"',0,'" + tdure.Text + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -104,7 +96,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -113,22 +104,17 @@ namespace GESTION_DES_CONGE
         {
             try
             {
-
                 if (tid.Text != "" && tnom.Text != "" && tprenom.Text != "" && tgrade.Text != "" && tservice.Text != "" && tnomAR.Text != "" && tprenomAR.Text != "" && tgradeAR.Text != "" && tdure.Text != "" && tservice.Text != "" && tserviceAR.Text != "" && tidservice.Text != "")
                 {
                     verifier();
-
                 }
-
                 else
                 {
-                    MessageBox.Show("Remplire toutes les shamps SVP !", "Important", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Remplire tous les shamps SVP !", "Important", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
             bupdate.Enabled = true;
@@ -165,7 +151,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -196,7 +181,7 @@ namespace GESTION_DES_CONGE
 
         private void bdelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voulez vous vraiment supprimer l'employé", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Voulez vous vraiment supprimer l'employé ?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("delete employe where N_dote='" + tid.Text + "'", con);
@@ -222,9 +207,7 @@ namespace GESTION_DES_CONGE
                 tdure.Text = dr[9].ToString();
                 tidservice.Text = dr[13].ToString();
                 //tservice.Text = dr[15].ToString();
-                //tserviceAR.Text = dr[14].ToString();
-
-
+                //tserviceAR.Text = dr[14].ToString();            
             }
 
             else
@@ -244,9 +227,7 @@ namespace GESTION_DES_CONGE
 
             //}
             //else
-            //{
             //    MessageBox.Show("Enixcist !", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //}
             //con.Close();
 
         }
@@ -362,8 +343,12 @@ namespace GESTION_DES_CONGE
             if(tdure.Text=="0")
             {
                 tdure.Text = "";
-            }
-      
+            }      
+        }
+
+        private void tid_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

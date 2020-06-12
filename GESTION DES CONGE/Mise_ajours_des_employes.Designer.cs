@@ -389,6 +389,7 @@
             this.tid.Name = "tid";
             this.tid.Size = new System.Drawing.Size(253, 23);
             this.tid.TabIndex = 1;
+            this.tid.TextChanged += new System.EventHandler(this.tid_TextChanged);
             this.tid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tid_KeyPress);
             // 
             // label2
