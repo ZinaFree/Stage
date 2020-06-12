@@ -162,9 +162,6 @@ insert into Detaille_Type_conge values(2,'Circoncision d''un enfant',1)
 insert into Detaille_Type_conge values(2,'Déménagement',2)
 insert into Detaille_Type_conge values(2,' l''hospitalisation du conjoint ',2)
 
-
-
-
 --------  Les jours fériés-------------------------------------------
 insert into jours_ferier values(1,'Aïd Al Fitr','2020/5/24','2020/5/28');
 insert into jours_ferier values(2,'Aid al Adha','2020/7/30','2020/7/31');
@@ -187,12 +184,6 @@ select * from jours_ferier
 
 
 select * from jours_ferier
- 
-
-
-
-
-
 
 insert into Devision values(1,'Division de l''évaluation et de la planification des ressources en eau','قسم تقييم وتخطيط الموارد المائية')
 ,(2,'Département de la gestion des ressources en eau','قسم التدبير المستدام لموارد المياه')
@@ -208,8 +199,6 @@ select * from Service
 						 insert into Service    values	  (4,'Service de suivi et d''évaluation des ressources en eau','مصلحة تتبع وتقييم موارد المياه',1),
 
 							  (5,'Office de planification et d''études des ressources en eau','مصلحة تخطيط موارد المياه والدراسات',1),
-
-						 
 
 							  (6,'Office de gestion et de mise en valeur des ressources en eau','مصلحة تدبير وتنمية موارد المياه',2),
 
@@ -442,10 +431,6 @@ exec calculer_C_N_W '2020/4/1','2020/4/6'
 
 select j.* from jours_ferier j inner join Conge c on c.Id_jour=j.Id_jour
 
-
-
-
-
 insert into jours_ferier values(3,'Premier Moharram','2020/11/1','2020/11/1');
 
 delete jours_ferier where Id_jour=123
@@ -521,14 +506,12 @@ alter procedure rt_date
 	@date2 date
 	as
 	begin
-	----Hada khdam f kol lhalat kayn9s layama dyalo mn les wekkday 
   declare @nb_holiday int
 
   declare @nb_Total int
   set @nb_Total=(select DATEDIFF(day, @Date1, @Date2) - DATEDIFF(week, @Date1, @Date2))
 
   select @nb_holiday=@nb_holiday-@nb_Total
-   ----On Cas kano li date li khda kaynin bin ay date_holiday
    if(exists(select * from jours_ferier
    where @date1  between date_jours_D  and date_jours_F or @date2 between date_jours_D and date_jours_F))
    begin 
@@ -659,8 +642,7 @@ begin
 				       declare @m int     set @m=(select day(@date_jours_D))
 							print cast(@date_jours_D as varchar)+'  '+cast(@date_jours_F as varchar)
 							fetch next from cur into @date_jours_D,@date_jours_F
-				   end
-						
+				   end	
 			close cur
 deallocate cur
 	select * from jours_ferier				
