@@ -15,7 +15,7 @@ namespace GESTION_DES_CONGE
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("data source=ABD-ASSAMAD-DES ; initial catalog= GESTION_DES_CONGE2 ;integrated security=true");
+        SqlConnection con = new SqlConnection(@"data source=zz\sqlExpress ; initial catalog= GESTION_DES_CONGE2 ;integrated security=true");
 
         private void Ajouter_division_Load(object sender, EventArgs e)
         {

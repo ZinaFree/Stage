@@ -16,7 +16,7 @@ namespace GESTION_DES_CONGE
         {
             InitializeComponent();
         }
-        public static SqlConnection con = new SqlConnection("data source=ABD-ASSAMAD-DES ; initial catalog= GESTION_DES_CONGE2 ;integrated security=true");
+        public static SqlConnection con = new SqlConnection(@"data source=zz\SqlExpress ; initial catalog= GESTION_DES_CONGE2 ;integrated security=true");
 
         private void button1_Click(object sender, EventArgs e)
         {

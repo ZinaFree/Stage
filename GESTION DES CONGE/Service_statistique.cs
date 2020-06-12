@@ -20,7 +20,7 @@ namespace GESTION_DES_CONGE
         SqlDataAdapter da2;
         DataSet ds;
 
-        public static SqlConnection con = new SqlConnection("data source=ABD-ASSAMAD-DES ; initial catalog= GESTION_DES_CONGE2 ;integrated security=true");
+        public static SqlConnection con = new SqlConnection(@"data source=zz\sqlExpress ; initial catalog= GESTION_DES_CONGE2 ;integrated security=true");
         private void Service_statistique_Load(object sender, EventArgs e)
         {
 
