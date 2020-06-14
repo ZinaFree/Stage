@@ -54,7 +54,6 @@ namespace GESTION_DES_CONGE
             tdoteR.Enabled = false;
             tnomR.Enabled = false;
 
-
             tdoteR.Enabled = false;
             tnomR.Enabled = false;
 
@@ -78,7 +77,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -95,10 +93,8 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
         }
         public void ajouter_conge()
         {
@@ -112,7 +108,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception  ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
 
@@ -177,7 +172,6 @@ namespace GESTION_DES_CONGE
             for (int i = 0; i < ds.Tables["emp"].Rows.Count; i++)
             {
                 tdote.Items.Add(ds.Tables["emp"].Rows[i][0]);
-
             }
         }
 
@@ -198,7 +192,6 @@ namespace GESTION_DES_CONGE
             for (int i = 0; i < ds.Tables["emp"].Rows.Count; i++)
             {
                 tdoteR.Items.Add(ds.Tables["emp"].Rows[i][0]);
-
             }
         }
 
@@ -217,9 +210,7 @@ namespace GESTION_DES_CONGE
                     tprenomAR.Text = ds.Tables["conge"].Rows[i][4].ToString();
                     tprecedent.Text = ds.Tables["conge"].Rows[i][11].ToString();
                     tactuel.Text = ds.Tables["conge"].Rows[i][12].ToString();
-
                 }
-
             }
         }
 
@@ -236,9 +227,7 @@ namespace GESTION_DES_CONGE
                     tprenomR.Text = ds.Tables["conge"].Rows[i][2].ToString();
                     tnomAR_R.Text = ds.Tables["conge"].Rows[i][3].ToString();
                     tprenom_AR_R.Text = ds.Tables["conge"].Rows[i][4].ToString();
-
                 }
-
             }
         }
 
@@ -263,9 +252,6 @@ namespace GESTION_DES_CONGE
                     tduree.Text = dataGridView1.Rows[e.RowIndex].Cells["nb_jour"].FormattedValue.ToString();
                     //dateSaisie.Text = dataGridView1.Rows[e.RowIndex].Cells["Date_saisie"].FormattedValue.ToString();
                     tdoteR.Text = dataGridView1.Rows[e.RowIndex].Cells["N_dote_remplacement"].FormattedValue.ToString();
-
-
-
                 }
             }
             catch (Exception ex)
@@ -314,7 +300,6 @@ namespace GESTION_DES_CONGE
                     if (tdote.Text == "" || tnomFR.Text == "" || tdoteR.Text == "" || tnomR.Text == "")
                     {
                         MessageBox.Show("Remplire les shamps SVP", "Important", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
                     }
                     else
                   if (tduree.Text == "")
@@ -331,21 +316,15 @@ namespace GESTION_DES_CONGE
                         bupdate.Enabled = true;
                         bprint.Enabled = true;
                     }
-
-
-
                 }
                 else
                 {
-
                     clear();
                     Increament_N();
-
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -368,7 +347,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -389,7 +367,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -426,7 +403,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -446,21 +422,16 @@ namespace GESTION_DES_CONGE
                 }
                 else
                 {
-
-                    MessageBox.Show("Imposible deffectuer ce conge");
+                    MessageBox.Show("Imposible d'effectuer ce conge !");
                 }
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
         }
         public void stored_proc()
         {
-
             try
             {
                 SqlCommand cmd = new SqlCommand("ps_CountWeekDays", con);
@@ -473,7 +444,6 @@ namespace GESTION_DES_CONGE
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-
                     tduree.Text = dr[0].ToString();
                 }
 
@@ -481,7 +451,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -490,22 +459,19 @@ namespace GESTION_DES_CONGE
         {
             try
             {
-                if (MessageBox.Show("Vouler vous modifier ce conge", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Vouler vous modifier ce conge ?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     modifier_duree_an();
                     SqlCommand cmd = new SqlCommand("update conge set N_dote='" + tdote.Text + "' ,Nom_employe='" + tnomAR.Text + "',prenom_employe='" + tprenomAR.Text + "',date_D='" + dateD.Text + "',date_F='" + DateF.Text + "',Nb_jour='" + tduree.Text + "',Date_saisie=getdate(),Anne='" + tanne.Text + "',id_type_c=1,type_de_conge='Anuel',N_dote_remplacement='" + tdoteR.Text + "',Nom_remplacement='" + tnomR.Text + "',Prenom_remplacement='" + tprenom_AR_R.Text + "' where id_type_c=1 and N_conge='" + tnconge.Text + "'", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
-                   
                     // modifier_duree_conge_avec_stored_proc();
                 }
-
                 remplire_gride();
             }
             catch (Exception ex) 
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -530,7 +496,7 @@ namespace GESTION_DES_CONGE
         {
             try
             {
-                if (MessageBox.Show("Vouler vous vraiment supprimer ce conge", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Vouler vous vraiment supprimer ce conge ?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //SqlCommand cmd = new SqlCommand("delete conge where N_dote='" + tdote.Text + "' and Nom_employe ='" + tnomAR.Text + "' and date_D='" + dateD.Text + "' and date_F='" + DateF.Text + "' ", con);
                     SqlCommand cmd = new SqlCommand("delete conge where N_conge='" + tnconge.Text + "'", con);
@@ -543,7 +509,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -568,7 +533,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -591,7 +555,6 @@ namespace GESTION_DES_CONGE
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
